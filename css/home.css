@@ -1,0 +1,414 @@
+
+/* ========================================
+   AUTONEST - HOME PAGE STYLES
+   ======================================== */
+
+/* 1. SECTION HEADING */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+
+/* 2. HERO SECTION */
+
+.hero {
+    background: var(--primary);
+    color: var(--white);
+    padding: 75px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-label {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
+}
+
+.hero-content p {
+    color: #D0D5DD;
+    font-size: 16px;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+
+/* 3. POPULAR BRANDS */
+
+.brands-section {
+    background: var(--white);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.brand-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.brand-card:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+
+/* 4. FEATURED CARS */
+
+.featured-section {
+    background: var(--background);
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+}
+
+.car-card-image {
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.car-card:hover .car-card-image img {
+    transform: scale(1.05);
+}
+
+.car-card-content {
+    padding: 20px;
+}
+
+.car-card-content h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.car-brand {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.car-price {
+    color: var(--accent);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.car-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.car-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.car-card-actions .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.section-action {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* 5. BUDGET SECTION */
+
+.budget-section {
+    background: var(--white);
+}
+
+.budget-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.budget-card {
+    padding: 30px 22px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.budget-card:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+}
+
+.budget-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.budget-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.budget-card span {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.budget-card:hover h3,
+.budget-card:hover p {
+    color: var(--white);
+}
+
+
+/* 6. WHY CHOOSE AUTONEST */
+
+.why-section {
+    background: var(--background);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 32px 25px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 7. CALL TO ACTION */
+
+.cta-section {
+    background: var(--primary);
+    padding: 65px 0;
+    color: var(--white);
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-container h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.cta-container p {
+    color: #D0D5DD;
+    font-size: 15px;
+}
+
+
+/* 8. FOOTER */
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.footer-links h3 {
+    color: var(--white);
+}
+
+.footer-links ul {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* 9. RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-image img {
+        height: 320px;
+    }
+
+    .budget-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        height: 230px;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .car-card-actions {
+        flex-direction: column;
+    }
+
+}

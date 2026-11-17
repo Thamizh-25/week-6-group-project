@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoNest | Find Your Perfect Car</title>
+
+    <meta name="description"
+        content="Discover, explore and compare cars with AutoNest. Find your perfect car at the right price.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="navbar-container">
+
+            <a href="index.html" class="logo">
+                Auto<span>Nest</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/cars.html">Explore Cars</a></li>
+                    <li><a href="pages/compare.html">Compare</a></li>
+                    <li><a href="pages/wishlist.html">Wishlist</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="pages/cars.html" class="btn btn-primary">
+                Find Your Car
+            </a>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        YOUR JOURNEY STARTS HERE
+                    </span>
+
+                    <h1>
+                        Find the Car That
+                        <span>Moves You.</span>
+                    </h1>
+
+                    <p>
+                        Discover your perfect drive with AutoNest.
+                        Explore trusted car brands, compare features
+                        and find the right car for your lifestyle.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="pages/cars.html" class="btn btn-primary">
+                            Explore Cars
+                        </a>
+
+                        <a href="#featured" class="btn btn-secondary">
+                            View Featured Cars
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+                        alt="Premium car displayed on a road">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POPULAR BRANDS ================= -->
+
+        <section class="section brands-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">OUR COLLECTION</span>
+                    <h2 class="section-title">Explore Popular Brands</h2>
+                    <p class="section-description">
+                        Discover vehicles from some of India's most popular car manufacturers.
+                    </p>
+                </div>
+
+                <div class="brands-grid">
+
+                    <a href="pages/cars.html?brand=Tata" class="brand-card">
+                        <span>TATA</span>
+                    </a>
+
+                    <a href="pages/cars.html?brand=Hyundai" class="brand-card">
+                        <span>HYUNDAI</span>
+                    </a>
+
+                    <a href="pages/cars.html?brand=Maruti%20Suzuki" class="brand-card">
+                        <span>MARUTI SUZUKI</span>
+                    </a>
+
+                    <a href="pages/cars.html?brand=Mahindra" class="brand-card">
+                        <span>MAHINDRA</span>
+                    </a>
+
+                    <a href="pages/cars.html?brand=Kia" class="brand-card">
+                        <span>KIA</span>
+                    </a>
+
+                    <a href="pages/cars.html?brand=Toyota" class="brand-card">
+                        <span>TOYOTA</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED CARS ================= -->
+
+        <section class="section featured-section" id="featured">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">HANDPICKED FOR YOU</span>
+                    <h2 class="section-title">Featured Cars</h2>
+                    <p class="section-description">
+                        Explore some of the most popular cars available in our collection.
+                    </p>
+                </div>
+
+                <div class="cars-grid" id="featuredCars">
+
+                    <!-- Featured car cards will be generated using JavaScript -->
+
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/cars.html" class="btn btn-primary">
+                        View All Cars
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPLORE BY BUDGET ================= -->
+
+        <section class="section budget-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">FIND YOUR RANGE</span>
+                    <h2 class="section-title">Explore Cars by Budget</h2>
+                    <p class="section-description">
+                        Find a car that matches your budget and expectations.
+                    </p>
+                </div>
+
+                <div class="budget-grid">
+
+                    <a href="pages/cars.html?maxPrice=500000" class="budget-card">
+                        <h3>Under ₹5 Lakh</h3>
+                        <p>Affordable everyday drives</p>
+                        <span>Explore Cars →</span>
+                    </a>
+
+                    <a href="pages/cars.html?maxPrice=1000000" class="budget-card">
+                        <h3>Under ₹10 Lakh</h3>
+                        <p>Smart choices for everyone</p>
+                        <span>Explore Cars →</span>
+                    </a>
+
+                    <a href="pages/cars.html?maxPrice=1500000" class="budget-card">
+                        <h3>Under ₹15 Lakh</h3>
+                        <p>Comfort meets performance</p>
+                        <span>Explore Cars →</span>
+                    </a>
+
+                    <a href="pages/cars.html?minPrice=1500000" class="budget-card">
+                        <h3>Above ₹15 Lakh</h3>
+                        <p>Experience premium driving</p>
+                        <span>Explore Cars →</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY CHOOSE US ================= -->
+
+        <section class="section why-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">THE AUTONEST ADVANTAGE</span>
+                    <h2 class="section-title">Why Choose AutoNest?</h2>
+                    <p class="section-description">
+                        Everything you need to make a confident car-buying decision.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🚗</div>
+                        <h3>Wide Car Selection</h3>
+                        <p>
+                            Explore different brands, models and vehicle categories
+                            in one convenient place.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>Easy Comparison</h3>
+                        <p>
+                            Compare important specifications and prices
+                            before making your decision.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Save Your Favourites</h3>
+                        <p>
+                            Keep track of the cars you love using
+                            your personal wishlist.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALL TO ACTION ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-container">
+
+                <div>
+                    <span class="section-tag">YOUR NEXT DRIVE AWAITS</span>
+
+                    <h2>Ready to Find Your Perfect Car?</h2>
+
+                    <p>
+                        Start exploring and discover a car that fits your journey.
+                    </p>
+                </div>
+
+                <a href="pages/cars.html" class="btn btn-primary">
+                    Explore All Cars
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Auto<span>Nest</span>
+                </a>
+
+                <p>
+                    Find your drive. Choose your journey.
+                    Discover your next car with AutoNest.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/cars.html">Explore Cars</a></li>
+                    <li><a href="pages/compare.html">Compare</a></li>
+                    <li><a href="pages/wishlist.html">Wishlist</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 AutoNest. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
