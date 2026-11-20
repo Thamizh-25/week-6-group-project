@@ -1,0 +1,262 @@
+/* ==========================================
+   AUTONEST - EXPLORE CARS PAGE CSS
+========================================== */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #F5F6F8;
+    color: #101828;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    background: #101828;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 span {
+    color: #F97316;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #F97316;
+}
+
+/* ---------- PAGE HEADING ---------- */
+
+.heading {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.heading h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #667085;
+}
+
+/* ---------- SEARCH SECTION ---------- */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 25px 5%;
+    background: white;
+}
+
+.search-section input,
+.search-section select {
+    padding: 12px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-section input {
+    width: 220px;
+}
+
+.search-section input:focus,
+.search-section select:focus {
+    border-color: #F97316;
+}
+
+.search-section button {
+    padding: 12px 22px;
+    background: #F97316;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-section button:hover {
+    background: #E65F08;
+}
+
+.search-section .reset-btn {
+    background: #344054;
+}
+
+.search-section .reset-btn:hover {
+    background: #101828;
+}
+
+/* ---------- CARS SECTION ---------- */
+
+.cars-section {
+    padding: 40px 7%;
+}
+
+.cars-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* ---------- CAR GRID ---------- */
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ---------- CAR CARD ---------- */
+
+.car-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    padding-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-card h3 {
+    padding: 15px 15px 8px;
+    font-size: 20px;
+}
+
+.car-card p {
+    padding: 4px 15px;
+    color: #667085;
+}
+
+.car-card h4 {
+    padding: 10px 15px;
+    color: #F97316;
+    font-size: 19px;
+}
+
+.car-card button {
+    margin: 5px 15px;
+    padding: 10px 18px;
+    background: #101828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.car-card button:hover {
+    background: #F97316;
+}
+
+/* ---------- NO CARS MESSAGE ---------- */
+
+#noCars {
+    text-align: center;
+    color: #667085;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #101828;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    color: #F97316;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* ---------- TABLET RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+    .car-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cars-section {
+        padding: 40px 5%;
+    }
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .heading h1 {
+        font-size: 27px;
+    }
+
+    .car-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section input,
+    .search-section select {
+        width: 100%;
+    }
+
+    .search-section button {
+        flex: 1;
+    }
+}
