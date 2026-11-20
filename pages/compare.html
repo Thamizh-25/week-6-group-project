@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars</title>
+
+    <link rel="stylesheet" href="../css/compare.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h2>Auto<span>Nest</span></h2>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore Cars</a></li>
+                <li><a href="#">Compare Cars</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Car Details</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Page Heading -->
+        <section class="compare-heading">
+            <h1>Compare Your Cars</h1>
+            <p>Find the perfect car by comparing features, prices and specifications.</p>
+        </section>
+
+        <!-- Car Selection Section -->
+
+        <section class="car-selection">
+
+            <h2>Select Cars to Compare</h2>
+
+            <div class="car-container">
+
+
+                <!-- First Car -->
+                <div class="car-box">
+                    <h3>Add First Car</h3>
+                    <button class="add-car" data-slot="0">Add Car +</button>
+                </div>
+
+                <!-- Second Car -->
+                <div class="car-box">
+                    <h3>Add Second Car</h3>
+                    <button class="add-car" data-slot="1">Add Car +</button>
+                </div>
+
+                <!-- Third Car -->
+                <div class="car-box">
+                    <h3>Add Third Car</h3>
+                    <button class="add-car" data-slot="2">Add Car +</button>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Comparison Section -->
+
+        <section class="comparison-section">
+
+            <h2>Car Comparison</h2>
+            <div id="car-list">
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Specifications</th>
+                        <th>Car 1</th>
+                        <th>Car 2</th>
+                        <th>Car 3</th>
+                    </tr>
+                </thead>
+
+                <tbody id="comparison-body">
+                    <tr>
+                        <td>Price</td>
+                        <td>₹12,00,000</td>
+                        <td>₹14,00,000</td>
+                        <td>₹16,00,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fuel Type</td>
+                        <td>Petrol</td>
+                        <td>Diesel</td>
+                        <td>Petrol</td>
+                    </tr>
+
+                    <tr>
+                        <td>Engine</td>
+                        <td>1497 cc</td>
+                        <td>1498 cc</td>
+                        <td>1462 cc</td>
+                    </tr>
+
+                    <tr>
+                        <td>Transmission</td>
+                        <td>Manual</td>
+                        <td>Automatic</td>
+                        <td>Manual</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mileage</td>
+                        <td>17 km/l</td>
+                        <td>20 km/l</td>
+                        <td>21 km/l</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AutoNest. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/compare.js"></script>
+
+</body>
+
+</html>

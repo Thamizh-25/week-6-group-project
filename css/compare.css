@@ -1,0 +1,195 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #172554;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+nav h2 {
+    color: white;
+    font-size: 28px;
+}
+
+nav h2 span {
+    color: #facc15;
+}
+
+/* Navigation Links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Car Selection Section */
+.car-selection {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.car-selection h2 {
+    font-size: 28px;
+    color: #172554;
+    margin-bottom: 30px;
+}
+
+/* Car Container */
+.car-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual Car Box */
+.car-box {
+    width: 250px;
+    padding: 40px 20px;
+    border: 2px dashed #94a3b8;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.car-box h3 {
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+/* Add Car Button */
+.car-box button {
+    padding: 12px 25px;
+    background-color: #172554;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.car-box button:hover {
+    background-color: #2563eb;
+}
+
+/* Comparison Section */
+.comparison-section {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.comparison-section h2 {
+    font-size: 28px;
+    color: #172554;
+    margin-bottom: 30px;
+}
+
+/* Comparison Table */
+.comparison-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Table Header and Data */
+.comparison-section th,
+.comparison-section td {
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+/* Table Heading */
+.comparison-section th {
+    background-color: #172554;
+    color: white;
+}
+
+/* First Column */
+.comparison-section td:first-child {
+    font-weight: bold;
+    background-color: #f1f5f9;
+}
+
+/* Hover Effect */
+.comparison-section tbody tr:hover {
+    background-color: #eff6ff;
+}
+.compare-heading {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f1f5f9;
+}
+/* Available Car Cards */
+.available-car {
+    width: 280px;
+    padding: 25px;
+    margin: 15px;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Car Name */
+.available-car h3 {
+    color: #172554;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* Car Price */
+.available-car p {
+    color: #475569;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+/* Select Car Button */
+.available-car button {
+    padding: 10px 22px;
+    background-color: #172554;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Button Hover */
+.available-car button:hover {
+    background-color: #2563eb;
+}
+
+/* Card Hover */
+.available-car:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+/* Available Cars Container */
+#car-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 0;
+}
