@@ -59,6 +59,7 @@ button {
 }
 
 .container {
+  /* background-color: #e6e6e6; */
   width: min(1200px, 90%);
   margin: 0 auto;
 }
@@ -190,7 +191,11 @@ button {
 }
 
 .section-heading h2 {
-  font-size: clamp(27px, 4vw, 36px);
+  font-size: clamp(
+    27px,
+    4vw,
+    36px
+  ); /* Preferred (4vw). Between 760px and 1160px wide, the font scales linearly at 4% of the viewport width. */
   font-weight: 800;
   line-height: 1.25;
   margin: 12px 0;
@@ -276,7 +281,7 @@ button {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.85fr 1.15fr; /* left column takes 42.5% of the available space and the right column takes 57.5% */
   align-items: stretch;
   gap: 35px;
 }
@@ -473,7 +478,7 @@ textarea.form-control {
 .form-control.valid {
   border-color: var(--success);
 }
-
+/* changes the input border to red */
 .form-control.invalid {
   border-color: var(--danger);
 }
@@ -496,6 +501,9 @@ textarea.form-control {
   align-items: center;
   gap: 10px;
   margin-top: 5px;
+}
+.message {
+  resize: none;
 }
 
 .message-footer .field-error {
