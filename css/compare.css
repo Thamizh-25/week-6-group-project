@@ -1,195 +1,529 @@
+/* ==========================================
+   AUTONEST - COMPARE CARS PAGE
+   Responsive Design
+========================================== */
 
-/* Basic Reset */
+/* ---------- BASIC RESET ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Navigation Bar */
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #F5F6F8;
+    color: #344054;
+    line-height: 1.6;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
 header {
-    background-color: #172554;
-    padding: 20px 50px;
+    background-color: #101828;
+    padding: 20px 5%;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
-/* Logo */
 nav h2 {
-    color: white;
+    color: #FFFFFF;
     font-size: 28px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 nav h2 span {
-    color: #facc15;
+    color: #F97316;
 }
 
-/* Navigation Links */
 nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 
-/* Car Selection Section */
+nav ul li a:hover {
+    color: #F97316;
+}
+
+
+/* ---------- PAGE HEADING ---------- */
+
+.compare-heading {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #FFFFFF;
+}
+
+.compare-heading h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #101828;
+    margin-bottom: 15px;
+}
+
+.compare-heading p {
+    font-size: 17px;
+    color: #344054;
+}
+
+
+/* ---------- CAR SELECTION ---------- */
+
 .car-selection {
-    padding: 40px 50px;
+    padding: 60px 5%;
     text-align: center;
 }
 
 .car-selection h2 {
     font-size: 28px;
-    color: #172554;
-    margin-bottom: 30px;
+    color: #101828;
+    margin-bottom: 40px;
 }
 
-/* Car Container */
+
+/* ---------- CAR CONTAINER ---------- */
+
 .car-container {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
-/* Individual Car Box */
+
+/* ---------- INDIVIDUAL CAR BOX ---------- */
+
 .car-box {
-    width: 250px;
-    padding: 40px 20px;
-    border: 2px dashed #94a3b8;
-    border-radius: 12px;
-    background-color: #f8fafc;
-}
+    width: 320px;
+    min-height: 240px;
+    padding: 40px 25px;
 
-.car-box h3 {
-    color: #334155;
-    margin-bottom: 20px;
-}
+    background-color: #FFFFFF;
+    border: 1px solid #E4E7EC;
+    border-radius: 18px;
 
-/* Add Car Button */
-.car-box button {
-    padding: 12px 25px;
-    background-color: #172554;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
 
-.car-box button:hover {
-    background-color: #2563eb;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-/* Comparison Section */
-.comparison-section {
-    padding: 40px 50px;
-    text-align: center;
-}
-
-.comparison-section h2 {
-    font-size: 28px;
-    color: #172554;
-    margin-bottom: 30px;
-}
-
-/* Comparison Table */
-.comparison-section table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-}
-
-/* Table Header and Data */
-.comparison-section th,
-.comparison-section td {
-    padding: 18px;
-    border: 1px solid #e2e8f0;
-    text-align: center;
-}
-
-/* Table Heading */
-.comparison-section th {
-    background-color: #172554;
-    color: white;
-}
-
-/* First Column */
-.comparison-section td:first-child {
-    font-weight: bold;
-    background-color: #f1f5f9;
-}
-
-/* Hover Effect */
-.comparison-section tbody tr:hover {
-    background-color: #eff6ff;
-}
-.compare-heading {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f1f5f9;
-}
-/* Available Car Cards */
-.available-car {
-    width: 280px;
-    padding: 25px;
-    margin: 15px;
-    display: inline-block;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    text-align: center;
     transition: 0.3s ease;
 }
 
-/* Car Name */
-.available-car h3 {
-    color: #172554;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-/* Car Price */
-.available-car p {
-    color: #475569;
-    font-size: 16px;
-    margin-bottom: 18px;
-}
-
-/* Select Car Button */
-.available-car button {
-    padding: 10px 22px;
-    background-color: #172554;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* Button Hover */
-.available-car button:hover {
-    background-color: #2563eb;
-}
-
-/* Card Hover */
-.available-car:hover {
+.car-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 25px rgba(16, 24, 40, 0.10);
 }
-/* Available Cars Container */
+
+.car-box h3 {
+    color: #101828;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.car-box button,
+.available-car button {
+    padding: 12px 25px;
+
+    background-color: #F97316;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.car-box button:hover,
+.available-car button:hover {
+    background-color: #EA580C;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- AVAILABLE CARS ---------- */
+
 #car-list {
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 20px;
+
     padding: 30px 0;
+}
+
+
+/* ---------- AVAILABLE CAR CARD ---------- */
+
+.available-car {
+    width: 280px;
+    padding: 30px 25px;
+    margin: 10px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E4E7EC;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(16, 24, 40, 0.06);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.available-car:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(16, 24, 40, 0.10);
+}
+
+.available-car h3 {
+    color: #101828;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.available-car p {
+    color: #344054;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- COMPARISON SECTION ---------- */
+
+.comparison-section {
+    padding: 60px 5%;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.comparison-section h2 {
+    font-size: 28px;
+    color: #101828;
+    margin-bottom: 40px;
+}
+
+
+/* ---------- COMPARISON TABLE ---------- */
+
+.comparison-section table {
+    width: 100%;
+    min-width: 650px;
+
+    border-collapse: collapse;
+
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
+
+/* ---------- TABLE CELLS ---------- */
+
+.comparison-section th,
+.comparison-section td {
+    padding: 20px;
+    border: 1px solid #E4E7EC;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* ---------- TABLE HEADER ---------- */
+
+.comparison-section th {
+    background-color: #101828;
+    color: #FFFFFF;
+
+    font-weight: 600;
+}
+
+
+/* ---------- FIRST COLUMN ---------- */
+
+.comparison-section td:first-child {
+    background-color: #F5F6F8;
+    color: #101828;
+
+    font-weight: 600;
+}
+
+
+/* ---------- TABLE HOVER ---------- */
+
+.comparison-section tbody tr:hover td {
+    background-color: #FFF7ED;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #101828;
+    color: #FFFFFF;
+
+    text-align: center;
+    padding: 25px 20px;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1024px) {
+
+    header {
+        padding: 20px 4%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .car-selection {
+        padding: 50px 4%;
+    }
+
+    .car-container {
+        gap: 20px;
+    }
+
+    .car-box {
+        width: 280px;
+    }
+
+    .comparison-section {
+        padding: 50px 4%;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav h2 {
+        font-size: 25px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* Page Heading */
+
+    .compare-heading {
+        padding: 50px 20px;
+    }
+
+    .compare-heading h1 {
+        font-size: 28px;
+    }
+
+    .compare-heading p {
+        font-size: 15px;
+    }
+
+
+    /* Car Selection */
+
+    .car-selection {
+        padding: 40px 20px;
+    }
+
+    .car-selection h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .car-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .car-box {
+        width: 100%;
+        max-width: 400px;
+        min-height: 200px;
+        padding: 30px 20px;
+    }
+
+
+    /* Available Cars */
+
+    #car-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .available-car {
+        width: 100%;
+        max-width: 400px;
+        margin: 0;
+    }
+
+
+    /* Comparison Section */
+
+    .comparison-section {
+        padding: 40px 20px;
+    }
+
+    .comparison-section h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Comparison Table */
+
+    .comparison-section table {
+        min-width: 650px;
+    }
+
+    .comparison-section th,
+    .comparison-section td {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE DEVICES
+========================================== */
+
+@media (max-width: 480px) {
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .compare-heading h1 {
+        font-size: 25px;
+    }
+
+    .compare-heading p {
+        font-size: 14px;
+    }
+
+    .car-selection h2,
+    .comparison-section h2 {
+        font-size: 22px;
+    }
+
+    .car-box h3 {
+        font-size: 19px;
+    }
+
+    .car-box {
+        min-height: 180px;
+    }
+
+    .car-box button,
+    .available-car button {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    .available-car h3 {
+        font-size: 18px;
+    }
+
+    .comparison-section th,
+    .comparison-section td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .car-box button {
+        margin: 5px;
+    }
+
+    .car-box {
+        padding: 30px 15px;
+    }
+
 }
