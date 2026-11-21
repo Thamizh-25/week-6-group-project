@@ -17,8 +17,11 @@ AutoNest provides a simple and user-friendly platform for exploring cars and com
 - Modern landing page
 - Navigation bar
 - Hero section
-- Featured content
-- Automotive-themed UI
+- Featured cars
+- Popular brands section
+- Budget-based car recommendations
+- Why Choose AutoNest section
+- Call-to-action section
 
 ### 🚘 Explore Cars
 - Browse available cars
@@ -37,6 +40,12 @@ AutoNest provides a simple and user-friendly platform for exploring cars and com
 - Dynamically generated comparison table
 - Compare car specifications
 
+### 🚗 Car Details
+- View individual car details
+- Access car information through the Explore Cars page
+- Detailed vehicle information
+- Navigation between pages
+
 ### 📩 Contact Us
 - Contact form
 - Form validation
@@ -44,10 +53,6 @@ AutoNest provides a simple and user-friendly platform for exploring cars and com
 - Consent checkbox
 - Submission success message
 - FAQ section
-
-### 🔜 Upcoming Features
-- Car Details Page
-- Wishlist functionality
 
 ---
 
@@ -95,8 +100,10 @@ AutoNest/
 │
 ├── css/
 │   ├── style.css
+│   ├── home.css
 │   ├── cars.css
 │   ├── compare.css
+│   ├── details.css
 │   └── contact.css
 │
 ├── js/
@@ -104,6 +111,7 @@ AutoNest/
 │   ├── data.js
 │   ├── cars.js
 │   ├── compare.js
+│   ├── details.js
 │   └── contact.js
 │
 ├── images/
@@ -146,7 +154,6 @@ Alternatively, use the **Live Server** extension in Visual Studio Code for a bet
 | Janarthanan | Cars / Explore Cars Page |
 | Veena | Car Details Page |
 | Naveen | Compare Cars Page |
-| Pachaiyappan | Wishlist Page |
 | Nithya | Contact Page |
 
 ---
@@ -171,7 +178,6 @@ feature/home-page
 feature/cars-page
 feature/car-details
 feature/compare-page
-feature/wishlist
 feature/contact-page
 ```
 
@@ -179,16 +185,15 @@ feature/contact-page
 
 ## 📌 Project Status
 
-| Page | Status |
+| Page / Feature | Status |
 |---|---|
 | Home Page | ✅ Completed |
 | Explore Cars Page | ✅ Completed |
 | Compare Cars Page | ✅ Completed |
 | Contact Page | ✅ Completed |
-| Car Details Page | 🚧 In Progress |
-| Wishlist Page | 🚧 In Progress |
-| Project Testing | 🚧 In Progress |
-| README Documentation | 🚧 In Progress |
+| Car Details Page | ✅ Completed |
+| Project Testing | ✅ Completed |
+| README Documentation | ✅ Completed |
 | Deployment | ⏳ Pending |
 
 ---
