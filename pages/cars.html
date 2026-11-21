@@ -1,37 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AutoNest - Explore Cars</title>
 
+    <!-- Global CSS -->
     <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cars.css">
+
+    <!-- Cars Page CSS -->
+    <link rel="stylesheet" href="../css/cars.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h2>AutoNest<span>.</span></h2>
+    <!-- ================= NAVBAR ================= -->
 
-        <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="cars.html">Explore Cars</a>
-            <a href="compare.html">Compare</a>
-            <a href="wishlist.html">Wishlist</a>
-            <a href="contact.html">Contact</a>
+    <header class="navbar">
+        <div class="navbar-container">
+
+            <a href="../index.html" class="logo">
+                Auto<span>Nest</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="cars.html" class="active">Explore Cars</a></li>
+                    <li><a href="compare.html">Compare Cars</a></li>
+                    <li><a href="car-details.html">Car Details</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="cars.html" class="btn btn-primary">
+                Find Your Car
+            </a>
+
         </div>
-    </nav>
+    </header>
 
-    <!-- Page Heading -->
+
+    <!-- ================= PAGE HEADING ================= -->
+
     <section class="heading">
         <h1>Explore Your Dream Car</h1>
         <p>Find your drive. Choose your journey.</p>
     </section>
 
-    <!-- Search and Filter Section -->
+
+    <!-- ================= SEARCH AND FILTER SECTION ================= -->
+
     <section class="search-section">
 
         <input
@@ -89,7 +111,9 @@
 
     </section>
 
-    <!-- Car Listings -->
+
+    <!-- ================= CAR LISTINGS ================= -->
+
     <section class="cars-section">
 
         <h2>Available Cars</h2>
@@ -126,6 +150,7 @@
 
             </div>
 
+
             <!-- Hyundai Verna -->
             <div
                 class="car-card"
@@ -155,6 +180,7 @@
                 </button>
 
             </div>
+
 
             <!-- Tata Nexon -->
             <div
@@ -186,6 +212,7 @@
 
             </div>
 
+
             <!-- Mahindra XUV700 -->
             <div
                 class="car-card"
@@ -215,6 +242,7 @@
                 </button>
 
             </div>
+
 
             <!-- Hyundai Creta -->
             <div
@@ -246,6 +274,7 @@
 
             </div>
 
+
             <!-- Mercedes-Benz S-Class -->
             <div
                 class="car-card"
@@ -275,6 +304,7 @@
                 </button>
 
             </div>
+
 
             <!-- BMW 7 Series -->
             <div
@@ -306,6 +336,7 @@
 
             </div>
 
+
             <!-- Porsche 911 -->
             <div
                 class="car-card"
@@ -336,6 +367,7 @@
 
             </div>
 
+
             <!-- Ford Mustang GT -->
             <div
                 class="car-card"
@@ -365,6 +397,7 @@
                 </button>
 
             </div>
+
 
             <!-- Lamborghini Huracan -->
             <div
@@ -398,20 +431,61 @@
 
         </div>
 
+
         <!-- No Results Message -->
         <p id="noCars"></p>
 
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <h2>AutoNest.</h2>
-        <p>Find your drive. Choose your journey.</p>
-        <p>© 2026 AutoNest. All rights reserved.</p>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="../index.html" class="logo">
+                    Auto<span>Nest</span>
+                </a>
+
+                <p>
+                    Find your drive. Choose your journey.
+                    Discover your next car with AutoNest.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="cars.html">Explore Cars</a></li>
+                    <li><a href="compare.html">Compare Cars</a></li>
+                    <li><a href="car-details.html">Car Details</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 AutoNest. All Rights Reserved.
+            </p>
+        </div>
+
     </footer>
 
-    <!-- JavaScript -->
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="../js/cars.js"></script>
 
 </body>
+
 </html>

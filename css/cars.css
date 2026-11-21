@@ -1,50 +1,13 @@
+
 /* ==========================================
    AUTONEST - EXPLORE CARS PAGE CSS
 ========================================== */
 
 /* ---------- GLOBAL ---------- */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
     background: #F5F6F8;
     color: #101828;
-}
-
-/* ---------- NAVBAR ---------- */
-
-.navbar {
-    background: #101828;
-    color: white;
-    padding: 20px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar h2 span {
-    color: #F97316;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #F97316;
 }
 
 /* ---------- PAGE HEADING ---------- */
@@ -52,11 +15,13 @@ body {
 .heading {
     text-align: center;
     padding: 50px 20px;
+    background: #F5F6F8;
 }
 
 .heading h1 {
     font-size: 35px;
     margin-bottom: 10px;
+    color: #101828;
 }
 
 .heading p {
@@ -82,6 +47,8 @@ body {
     border-radius: 6px;
     outline: none;
     font-size: 14px;
+    background: white;
+    color: #101828;
 }
 
 .search-section input {
@@ -91,7 +58,10 @@ body {
 .search-section input:focus,
 .search-section select:focus {
     border-color: #F97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
 }
+
+/* SEARCH BUTTON */
 
 .search-section button {
     padding: 12px 22px;
@@ -104,8 +74,10 @@ body {
 }
 
 .search-section button:hover {
-    background: #E65F08;
+    background: #EA580C;
 }
+
+/* RESET BUTTON */
 
 .search-section .reset-btn {
     background: #344054;
@@ -125,6 +97,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
+    color: #101828;
 }
 
 /* ---------- CAR GRID ---------- */
@@ -161,6 +134,7 @@ body {
 .car-card h3 {
     padding: 15px 15px 8px;
     font-size: 20px;
+    color: #101828;
 }
 
 .car-card p {
@@ -198,28 +172,14 @@ body {
     font-size: 18px;
 }
 
-/* ---------- FOOTER ---------- */
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 
-footer {
-    background: #101828;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    margin-top: 40px;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-    color: #F97316;
-}
-
-footer p {
-    margin: 8px;
-}
-
-/* ---------- TABLET RESPONSIVE ---------- */
+/* ---------- TABLET ---------- */
 
 @media (max-width: 900px) {
+
     .car-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -227,20 +187,15 @@ footer p {
     .cars-section {
         padding: 40px 5%;
     }
+
 }
 
-/* ---------- MOBILE RESPONSIVE ---------- */
+/* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    .heading {
+        padding: 40px 20px;
     }
 
     .heading h1 {
@@ -251,6 +206,10 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .search-section {
+        padding: 25px 5%;
+    }
+
     .search-section input,
     .search-section select {
         width: 100%;
@@ -259,4 +218,13 @@ footer p {
     .search-section button {
         flex: 1;
     }
+
+    .cars-section h2 {
+        font-size: 24px;
+    }
+
+    .car-card img {
+        height: 220px;
+    }
+
 }
