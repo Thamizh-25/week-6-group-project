@@ -1,52 +1,139 @@
-// Get the car ID from the URL
+
+/* ==========================================
+   AUTONEST - CAR DETAILS JAVASCRIPT
+========================================== */
+
+// GET CAR ID OR NAME FROM URL
 
 const params = new URLSearchParams(window.location.search);
 
 const carId = params.get("id");
+const carName = params.get("name");
 
-// Find the selected car from existing cars array
 
-const selectedCar = cars.find(function(car) {
-    return car.id == carId;
+// NORMALIZE CAR NAMES
+
+function normalizeCarName(name) {
+    return String(name || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+}
+
+
+// FIND SELECTED CAR
+
+let selectedCar = cars.find(function (car) {
+
+    // SEARCH BY ID
+    if (carId) {
+        return String(car.id) === String(carId);
+    }
+
+    // SEARCH BY NAME
+    if (carName) {
+
+        const requestedName = normalizeCarName(carName);
+
+        const availableNames = [
+            car.fullName,
+            car.name,
+            car.model
+        ];
+
+        return availableNames.some(function (name) {
+            return normalizeCarName(name) === requestedName;
+        });
+
+    }
+
+    return false;
+
 });
 
-// Set HTML Conatiner
 
-const carDetails = document.getElementById("carDetails") 
+// DEFAULT CAR WHEN NAVBAR IS CLICKED
 
-//DISPLAY CAR DETAILS
+if (!selectedCar && !carId && !carName) {
+    selectedCar = cars[0];
+}
+
+
+// GET HTML CONTAINER
+
+const carDetails = document.getElementById("carDetails");
+
+
+// ==========================================
+// DISPLAY CAR DETAILS
+// ==========================================
 
 if (selectedCar) {
 
+    // CAR NAME
+    const displayName =
+        selectedCar.fullName ||
+        selectedCar.name ||
+        selectedCar.model ||
+        "Car";
+
+
+    // CAR IMAGE
+    let carImage = selectedCar.image || "";
+
+    if (
+        carImage &&
+        !carImage.startsWith("http") &&
+        !carImage.startsWith("../")
+    ) {
+        carImage = "../" + carImage;
+    }
+
+
+    // CAR PRICE
+    const carPrice = Number(selectedCar.price) || 0;
+
+
     carDetails.innerHTML = `
 
-    <div class="details-grid">
-    
-    <!--CAR IMAGE-->
-    <div class="details-image">
+        <div class="details-grid">
 
-        <img src="../${selectedCar.image}"
-        alt="${selectedCar.fullName}">
+            <!-- CAR IMAGE -->
+
+            <div class="details-image">
+
+                <img
+                    src="${carImage}"
+                    alt="${displayName}"
+                >
+
             </div>
 
-        <!--CAR INFORMATION-->
-        <div class="details-content">
-            <p class="car-category">
-                ${selectedCar.bodyType}
+
+            <!-- CAR INFORMATION -->
+
+            <div class="details-content">
+
+                <p class="car-category">
+                    ${selectedCar.bodyType || "Car"}
                 </p>
-                <h1>${selectedCar.fullName}</h1>
+
+                <h1>${displayName}</h1>
 
                 <p class="car-description">
-                    Explore the features and specifications of ${selectedCar.fullName}.
-                    </p>
+                    Explore the features and specifications
+                    of ${displayName}.
+                </p>
 
-                    <!--PRICING-->
-                    <div class="pricing-box">
+
+                <!-- PRICING -->
+
+                <div class="pricing-box">
 
                     <p>Starting Price</p>
 
                     <h2>
-                        ${selectedCar.price.toLocaleString("en-IN", {
+                        ${carPrice.toLocaleString("en-IN", {
                             style: "currency",
                             currency: "INR",
                             maximumFractionDigits: 0
@@ -54,86 +141,161 @@ if (selectedCar) {
                     </h2>
 
                 </div>
+
+
                 <!-- CAR SPECIFICATIONS -->
 
                 <div class="specifications">
 
                     <div class="spec-item">
+
                         <span>Fuel Type</span>
-                        <h3>${selectedCar.fuel}</h3>
+
+                        <h3>
+                            ${selectedCar.fuel || "N/A"}
+                        </h3>
+
                     </div>
 
+
                     <div class="spec-item">
+
                         <span>Transmission</span>
-                        <h3>${selectedCar.transmission}</h3>
+
+                        <h3>
+                            ${selectedCar.transmission || "N/A"}
+                        </h3>
+
                     </div>
 
+
                     <div class="spec-item">
+
                         <span>Mileage</span>
-                        <h3>${selectedCar.mileage}</h3>
+
+                        <h3>
+                            ${selectedCar.mileage || "N/A"}
+                        </h3>
+
                     </div>
 
+
                     <div class="spec-item">
+
                         <span>Engine</span>
-                        <h3>${selectedCar.engine}</h3>
+
+                        <h3>
+                            ${selectedCar.engine || "N/A"}
+                        </h3>
+
                     </div>
 
+
                     <div class="spec-item">
+
                         <span>Seating Capacity</span>
-                        <h3>${selectedCar.seating} Persons</h3>
+
+                        <h3>
+                            ${selectedCar.seating || "N/A"} Persons
+                        </h3>
+
                     </div>
+
 
                     <div class="spec-item">
+
                         <span>Body Type</span>
-                        <h3>${selectedCar.bodyType}</h3>
+
+                        <h3>
+                            ${selectedCar.bodyType || "N/A"}
+                        </h3>
+
                     </div>
 
-    
-                     </div>
-
-                <!-- ENQUIRY BUTTON -->
-                <div class="enquiry-action">
-                    <button type="button" id="enquiryBtn" class="btn btn-primary">
-                        Enquire Now
-                    </button>
                 </div>
 
+
+                <!-- ENQUIRY BUTTON -->
+
+                <div class="enquiry-action">
+
+                    <button
+                        type="button"
+                        id="enquiryBtn"
+                        class="btn btn-primary">
+
+                        Enquire Now
+
+                    </button>
+
+                </div>
+
+
                 <!-- ENQUIRY FORM -->
-                <form id="enquiryForm" class="enquiry-form" hidden>
+
+                <form
+                    id="enquiryForm"
+                    class="enquiry-form"
+                    hidden>
 
                     <h2>Car Enquiry</h2>
 
-                    <p>Interested in ${selectedCar.fullName}? Send us your enquiry.</p>
+                    <p>
+                        Interested in ${displayName}?
+                        Send us your enquiry.
+                    </p>
 
-                    <input type="text"
+
+                    <input
+                        type="text"
                         placeholder="Your Name"
                         name="name"
-                        required>
+                        required
+                    >
 
-                    <input type="email"
+
+                    <input
+                        type="email"
                         placeholder="Your Email"
                         name="email"
-                        required>
+                        required
+                    >
 
-                    <input type="number"
+
+                    <input
+                        type="tel"
                         placeholder="Your Phone Number"
                         name="phone"
-                        required>
+                        required
+                    >
+
 
                     <textarea
                         placeholder="Your Message"
                         name="message"
                         rows="4"
-                        required></textarea>
+                        required
+                    ></textarea>
 
-                    <button type="submit" class="btn btn-primary">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
                         Submit Enquiry
+
                     </button>
 
-                  
-
                 </form>
-                  <p id="enquiryMessage" aria-live="polite"></p>
+
+
+                <!-- ENQUIRY MESSAGE -->
+
+                <p
+                    id="enquiryMessage"
+                    aria-live="polite">
+
+                </p>
 
             </div>
 
@@ -141,16 +303,21 @@ if (selectedCar) {
 
     `;
 
-     // GET ENQUIRY ELEMENTS
 
-    const enquiryBtn = document.getElementById("enquiryBtn");
+    // ==========================================
+    // ENQUIRY FUNCTIONALITY
+    // ==========================================
 
-    const enquiryForm = document.getElementById("enquiryForm");
+    const enquiryBtn =
+        document.getElementById("enquiryBtn");
+
+    const enquiryForm =
+        document.getElementById("enquiryForm");
 
 
     // SHOW ENQUIRY FORM
 
-    enquiryBtn.addEventListener("click", function() {
+    enquiryBtn.addEventListener("click", function () {
 
         enquiryForm.hidden = false;
 
@@ -162,29 +329,44 @@ if (selectedCar) {
     });
 
 
-// SUBMIT ENQUIRY FORM
+    // SUBMIT ENQUIRY FORM
 
-enquiryForm.addEventListener("submit", function(event) {
+    enquiryForm.addEventListener("submit", function (event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    const enquiryMessage = document.getElementById("enquiryMessage");
+        const enquiryMessage =
+            document.getElementById("enquiryMessage");
 
-    enquiryMessage.textContent =
-        `Thank you! Your enquiry for ${selectedCar.fullName} has been received.`;
+        enquiryMessage.textContent =
+            `Thank you! Your enquiry for ${displayName} has been received.`;
 
-    enquiryForm.hidden = true;
+        enquiryForm.hidden = true;
 
-});
+    });
 
-} else {
-
-    carDetails.innerHTML = `
-        <h2>Car not found!</h2>
-        <a href="../pages/cars.html">Explore Cars</a>
-    `;
 
 }
 
 
-     
+// ==========================================
+// CAR NOT FOUND
+// ==========================================
+
+else {
+
+    carDetails.innerHTML = `
+
+        <div class="car-not-found">
+
+            <h2>Car not found!</h2>
+
+            <a href="cars.html">
+                Explore Cars
+            </a>
+
+        </div>
+
+    `;
+
+}

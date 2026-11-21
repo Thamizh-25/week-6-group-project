@@ -16,7 +16,7 @@ function filterCars() {
 
     let visibleCars = 0;
 
-    carCards.forEach(function(car) {
+    carCards.forEach(function (car) {
 
         const name = car.dataset.name.toLowerCase();
         const carType = car.dataset.type;
@@ -44,7 +44,7 @@ function filterCars() {
 
         if (price === "above100" && carPrice <= 100) {
             showCar = false;
-        } 
+        }
         else if (price !== "" && price !== "above100" && carPrice >= Number(price)) {
             showCar = false;
         }
@@ -78,7 +78,7 @@ function resetFilters() {
     document.getElementById("fuelFilter").value = "";
     document.getElementById("priceFilter").value = "";
 
-    carCards.forEach(function(car) {
+    carCards.forEach(function (car) {
         car.style.display = "block";
     });
 
@@ -88,5 +88,7 @@ function resetFilters() {
 
 // View Details button
 function viewDetails(carName) {
-    alert("You selected " + carName);
+
+    window.location.href = `car-details.html?name=${encodeURIComponent(carName)}`;
+
 }

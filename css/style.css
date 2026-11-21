@@ -1,9 +1,11 @@
 
 /* ========================================
    AUTONEST - GLOBAL DESIGN SYSTEM
-   ======================================== */
+======================================== */
+
 
 /* 1. CSS VARIABLES */
+
 :root {
     --primary: #101828;
     --accent: #F97316;
@@ -26,10 +28,9 @@
     --transition: 0.3s ease;
 }
 
-/* 2. GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* 3. RESET */
+/* 2. RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -72,14 +73,18 @@ ul {
     list-style: none;
 }
 
-/* 4. COMMON CONTAINER */
+
+/* 3. COMMON CONTAINER */
+
 .container {
     width: 90%;
     max-width: var(--container-width);
     margin: 0 auto;
 }
 
-/* 5. COMMON SECTION */
+
+/* 4. COMMON SECTION */
+
 .section {
     padding: 70px 0;
 }
@@ -97,44 +102,68 @@ ul {
     margin-bottom: 32px;
 }
 
-/* 6. NAVBAR */
+
+/* ========================================
+   5. NAVBAR - CONSISTENT ACROSS ALL PAGES
+======================================== */
+
 .navbar {
     background: var(--primary);
     color: var(--white);
-    padding: 18px 0;
+    width: 100%;
+    padding: 0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-container {
     width: 90%;
     max-width: var(--container-width);
+    min-height: 80px;
     margin: 0 auto;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+
+    gap: 20px;
 }
+
+
+/* LOGO */
 
 .logo {
     color: var(--white);
     font-size: 26px;
     font-weight: 800;
+    white-space: nowrap;
+    justify-self: start;
+    line-height: 1;
 }
 
 .logo span {
     color: var(--accent);
 }
 
+
+/* NAVIGATION LINKS */
+
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+
+    gap: 26px;
+    white-space: nowrap;
 }
 
 .nav-links a {
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
+    line-height: 1;
+
     transition: var(--transition);
 }
 
@@ -143,7 +172,51 @@ ul {
     color: var(--accent);
 }
 
-/* 7. COMMON BUTTONS */
+
+/* FIND YOUR CAR BUTTON */
+
+.navbar-container > .btn,
+.navbar-container > .nav-button {
+    justify-self: end;
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+    min-height: 42px;
+
+    background: var(--accent);
+    color: var(--white);
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.navbar-container > .btn:hover,
+.navbar-container > .nav-button:hover {
+    background: #EA580C;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* ========================================
+   6. COMMON BUTTONS
+======================================== */
+
 .btn {
     display: inline-flex;
     justify-content: center;
@@ -151,6 +224,7 @@ ul {
     gap: 8px;
 
     padding: 12px 24px;
+
     border: 1px solid transparent;
     border-radius: var(--radius-sm);
 
@@ -181,7 +255,11 @@ ul {
     color: var(--white);
 }
 
-/* 8. COMMON CARDS */
+
+/* ========================================
+   7. COMMON CARDS
+======================================== */
+
 .card {
     background: var(--white);
     border-radius: var(--radius-md);
@@ -195,7 +273,11 @@ ul {
     box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12);
 }
 
-/* 9. COMMON INPUTS */
+
+/* ========================================
+   8. COMMON INPUTS
+======================================== */
+
 .form-control {
     width: 100%;
     padding: 13px 15px;
@@ -213,7 +295,11 @@ ul {
     box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
 }
 
-/* 10. FOOTER */
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
 .footer {
     background: var(--primary);
     color: var(--white);
@@ -258,8 +344,50 @@ ul {
     font-size: 13px;
 }
 
-/* 11. RESPONSIVE DESIGN */
+
+/* ========================================
+   10. RESPONSIVE DESIGN
+======================================== */
+
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        min-height: auto;
+    }
+
+    .navbar-container {
+        grid-template-columns: 1fr auto;
+        min-height: 80px;
+        gap: 20px;
+    }
+
+    .navbar-container nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 15px;
+    }
+
+    .navbar-container > .btn,
+    .navbar-container > .nav-button {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+}
+
+
+/* MOBILE */
+
 @media (max-width: 768px) {
+
     .section {
         padding: 45px 0;
     }
@@ -269,21 +397,46 @@ ul {
     }
 
     .navbar-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: 26px;
     }
 
     .nav-links {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 15px 20px;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .navbar-container > .btn,
+    .navbar-container > .nav-button {
+        justify-self: auto;
     }
 
     .footer-container {
         flex-direction: column;
     }
+
 }
 
+
+/* SMALL MOBILE */
+
 @media (max-width: 480px) {
+
     .container {
         width: 92%;
     }
@@ -299,4 +452,13 @@ ul {
     .logo {
         font-size: 23px;
     }
+
+    .nav-links {
+        gap: 12px 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
 }

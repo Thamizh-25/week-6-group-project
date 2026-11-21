@@ -1,4 +1,11 @@
-/* CAR DETAILS SECTION */
+/* ==========================================
+   AUTONEST - CAR DETAILS CSS
+========================================== */
+
+
+/* ==========================================
+   CAR DETAILS SECTION
+========================================== */
 
 .car-details-section {
     padding: 60px 0;
@@ -54,7 +61,9 @@
 }
 
 
-/* PRICING */
+/* ==========================================
+   PRICING
+========================================== */
 
 .pricing-box {
     background: white;
@@ -76,7 +85,9 @@
 }
 
 
-/* SPECIFICATIONS */
+/* ==========================================
+   SPECIFICATIONS
+========================================== */
 
 .specifications {
     display: grid;
@@ -103,43 +114,9 @@
 }
 
 
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 768px) {
-
-    .details-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .details-image {
-        height: 300px;
-    }
-
-    .details-content h1 {
-        font-size: 26px;
-    }
-
-}
-
-@media (max-width: 480px) {
-
-    .details-image {
-        height: 230px;
-    }
-
-    .specifications {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .spec-item {
-        padding: 10px;
-    }
-
-}
-
-/* ENQUIRY BUTTON */
+/* ==========================================
+   ENQUIRY BUTTON
+========================================== */
 
 .enquiry-action {
     margin-top: 25px;
@@ -152,7 +129,9 @@
 }
 
 
-/* ENQUIRY FORM */
+/* ==========================================
+   ENQUIRY FORM
+========================================== */
 
 .enquiry-form {
     display: grid;
@@ -197,19 +176,148 @@
     resize: vertical;
 }
 
-.enquiry-form button {
-    padding: 13px;
-    cursor: pointer;
-}
-
-#enquiryMessage {
-    color: green;
-    font-weight: 600;
-}
-
 #enquiryMessage {
     color: green;
     font-size: 18px;
     font-weight: 600;
     margin-top: 20px;
+}
+
+
+/* ==========================================
+   CAR NOT FOUND
+========================================== */
+
+.car-not-found {
+    padding: 40px 0;
+}
+
+.car-not-found h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.car-not-found a {
+    color: var(--accent);
+}
+
+
+/* ==========================================
+   CALL TO ACTION SECTION
+========================================== */
+
+.cta-section {
+    padding: 70px 20px;
+    background: var(--background);
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    gap: 25px;
+}
+
+
+/* CTA TEXT */
+
+.cta-container .section-tag {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.cta-container h2 {
+    color: var(--primary);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta-container p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* CTA BUTTON */
+
+.cta-container .btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    .car-details-section {
+        padding: 40px 0;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .details-image {
+        height: 300px;
+    }
+
+    .details-content h1 {
+        font-size: 26px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+        padding: 55px 20px;
+    }
+
+    .cta-container h2 {
+        font-size: 28px;
+    }
+
+    .cta-container p {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .details-image {
+        height: 230px;
+    }
+
+    .specifications {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .spec-item {
+        padding: 10px;
+    }
+
+    .cta-container h2 {
+        font-size: 24px;
+    }
+
+    .cta-container {
+        gap: 20px;
+    }
+
 }
